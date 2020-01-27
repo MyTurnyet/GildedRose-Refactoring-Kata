@@ -23,7 +23,7 @@ public class GildedRoseTest
     }
 
     @Test
-    public void should_decrement_Quality_twice_whenSellIn_passed()
+    public void should_decrementQuality_twice_whenSellIn_lessThanZero()
     {
         //assign
         Item[] items = new Item[]{new Item("foo", 0, 32)};
@@ -37,7 +37,7 @@ public class GildedRoseTest
     }
 
     @Test
-    public void should_never_decrement_Quality_past_zero()
+    public void should_never_decrementQuality_pastZero()
     {
         //assign
         Item[] items = new Item[]{new Item("foo", 3, 0)};
@@ -51,7 +51,7 @@ public class GildedRoseTest
     }
 
     @Test
-    public void should_decrement_SellIn_and_Increment_Qualtiy__ForAgedBrie_byOne()
+    public void should_decrementSellIn_and_incrementQualtiy__ForAgedBrie_byOne()
     {
         //assign
         Item[] items = new Item[]{new Item("Aged Brie", 13, 32)};
@@ -66,7 +66,7 @@ public class GildedRoseTest
     }
 
     @Test
-    public void should_never_increment_Quality_aboveFifty()
+    public void should_never_incrementQuality_aboveFifty()
     {
         //assign
         Item[] items = new Item[]{new Item("Aged Brie", 3, 50)};
@@ -80,7 +80,7 @@ public class GildedRoseTest
     }
 
     @Test
-    public void should_never_change_sellInOrQuality_forSulfuras()
+    public void should_never_change_sellIn_or_Quality_forSulfuras()
     {
         //assign
         Item[] items = new Item[]{new Item("Sulfuras, Hand of Ragnaros", 55, 66)};
@@ -112,7 +112,7 @@ public class GildedRoseTest
     }
 
     @Test
-    public void should_incrementQuality_byTwo_forBackstagePasses_WhenLessThan10DaysSellIn()
+    public void should_incrementQuality_byTwo_forBackstagePasses_WhenSellIn_10Days()
     {
         //assign
         Item[] items = new Item[]{
@@ -129,7 +129,7 @@ public class GildedRoseTest
     }
 
     @Test
-    public void should_incrementQuality_byTwo_forBackstagePasses_WhenLessThan10Days_andGreaterThan6()
+    public void should_incrementQuality_byTwo_forBackstagePasses_WhenSellIn_6()
     {
         //assign
         Item[] items = new Item[]{
@@ -146,7 +146,7 @@ public class GildedRoseTest
     }
 
     @Test
-    public void should_incrementQuality_byThree_forBackstagePasses_WhenLessThan6DaysSellIn()
+    public void should_incrementQuality_byThree_forBackstagePasses_WhenSellIn_5()
     {
         //assign
         Item[] items = new Item[]{
@@ -163,7 +163,7 @@ public class GildedRoseTest
     }
 
     @Test
-    public void should_incrementQuality_byThree_forBackstagePasses_WhenLessThan6Days_andGreaterThan0()
+    public void should_incrementQuality_byThree_forBackstagePasses_WhenSellin_5()
     {
         //assign
         Item[] items = new Item[]{
@@ -180,7 +180,7 @@ public class GildedRoseTest
     }
 
     @Test
-    public void should_setQuality_toZero_forBackstagePasses_WhenSellIn_LessThanOne()
+    public void should_setQuality_toZero_forBackstagePasses_WhenSellIn_Zero()
     {
         //assign
         Item[] items = new Item[]{
