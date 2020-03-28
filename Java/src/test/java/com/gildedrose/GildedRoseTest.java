@@ -163,7 +163,7 @@ public class GildedRoseTest
     }
 
     @Test
-    public void should_incrementQuality_byThree_forBackstagePasses_WhenSellin_5()
+    public void should_incrementQuality_byThree_forBackstagePasses_WhenSellin_1()
     {
         //assign
         Item[] items = new Item[]{
