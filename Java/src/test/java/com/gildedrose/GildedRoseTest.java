@@ -30,6 +30,13 @@ class GildedRoseTest {
     }
 
     private static Item createItem(String name, Integer sellIn, Integer quality) {
+        if(name.equals("Aged Brie")){
+            return new AgedBrie( sellIn, quality);
+        }
+        if(name.equals("Backstage passes to a TAFKAL80ETC concert")){
+            BackstagePasses backstagePasses = new BackstagePasses(sellIn, quality);
+            return backstagePasses;
+        }
         return new Item(name, sellIn, quality);
     }
 
