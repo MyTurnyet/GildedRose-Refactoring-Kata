@@ -21,12 +21,16 @@ class GildedRoseTest {
         CombinationApprovals.verifyAllCombinations(
                 (name, sellIn, quality) ->
                 {
-                    Item item = new Item(name, sellIn, 0);
+                    Item item = createItem(name, sellIn, quality);
                     Item[] itemArray = new Item[]{item};
                     GildedRose app = new GildedRose(itemArray);
                     app.updateQuality();
-                    return String.format("[%s, %d, %d]", item.name, item.sellIn, item.quality);
+                    return item.toString();
                 }, names, sellInValues, qualityValues);
+    }
+
+    private static Item createItem(String name, Integer sellIn, Integer quality) {
+        return new Item(name, sellIn, quality);
     }
 
 }
