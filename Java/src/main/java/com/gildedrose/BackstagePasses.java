@@ -4,4 +4,9 @@ public class BackstagePasses extends ShopItem{
     public BackstagePasses( int sellIn, int quality) {
         super("Backstage passes to a TAFKAL80ETC concert", sellIn, quality);
     }
+
+    @Override
+    public void decrementSellIn() {
+        this.sellIn = this.sellIn - 1;
+    }
 }
