@@ -21,15 +21,15 @@ class GildedRoseTest {
         CombinationApprovals.verifyAllCombinations(
                 (name, sellIn, quality) ->
                 {
-                    Item item = createItem(name, sellIn, quality);
-                    Item[] itemArray = new Item[]{item};
+                    ShopItem item = createItem(name, sellIn, quality);
+                    ShopItem[] itemArray = new ShopItem[]{item};
                     GildedRose app = new GildedRose(itemArray);
                     app.updateQuality();
                     return item.toString();
                 }, names, sellInValues, qualityValues);
     }
 
-    private static Item createItem(String name, Integer sellIn, Integer quality) {
+    private static ShopItem createItem(String name, Integer sellIn, Integer quality) {
         if(name.equals("Aged Brie")){
             return new AgedBrie( sellIn, quality);
         }
