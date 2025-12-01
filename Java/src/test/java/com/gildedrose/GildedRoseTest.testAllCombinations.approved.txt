@@ -1,1 +1,7 @@
-[Aged Brie] => [Aged Brie, -1, 2] 
+[Aged Brie, -1] => [Aged Brie, -2, 2] 
+[Aged Brie, 0] => [Aged Brie, -1, 2] 
+[Aged Brie, 2] => [Aged Brie, 1, 1] 
+[Aged Brie, 6] => [Aged Brie, 5, 1] 
+[Aged Brie, 5] => [Aged Brie, 4, 1] 
+[Aged Brie, 10] => [Aged Brie, 9, 1] 
+[Aged Brie, 11] => [Aged Brie, 10, 1] 
