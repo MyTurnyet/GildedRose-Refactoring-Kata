@@ -5,4 +5,5 @@ public abstract class ShopItem extends Item{
         super(name, sellIn, quality);
     }
     public abstract void decrementSellIn();
+    public abstract void decrementQuality();
 }

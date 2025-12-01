@@ -9,4 +9,8 @@ public class AgedBrie extends ShopItem{
     public void decrementSellIn() {
         this.sellIn = this.sellIn - 1;
     }
+
+    @Override
+    public void decrementQuality() {
+    }
 }

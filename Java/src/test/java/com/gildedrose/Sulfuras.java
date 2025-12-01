@@ -8,4 +8,8 @@ public class Sulfuras extends ShopItem {
     @Override
     public void decrementSellIn() {
     }
+
+    @Override
+    public void decrementQuality() {
+    }
 }

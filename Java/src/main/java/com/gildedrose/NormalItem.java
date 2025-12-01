@@ -9,4 +9,9 @@ public class NormalItem extends ShopItem {
     public void decrementSellIn() {
         this.sellIn = this.sellIn - 1;
     }
+
+    @Override
+    public void decrementQuality() {
+        this.quality = this.quality - 1;
+    }
 }
