@@ -26,6 +26,11 @@ public class BackstagePasses extends ShopItem {
         }
     }
 
+    @Override
+    public void updateQuality() {
+        incrementQuality();
+    }
+
     private void incrementQualityIfNotOver50() {
         if (this.quality >= 50) {
             return;

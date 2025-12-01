@@ -21,4 +21,9 @@ public class AgedBrie extends ShopItem{
         }
         this.quality = this.quality + 1;
     }
+
+    @Override
+    public void updateQuality() {
+        incrementQuality();
+    }
 }

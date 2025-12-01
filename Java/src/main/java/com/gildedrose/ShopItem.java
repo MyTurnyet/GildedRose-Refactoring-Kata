@@ -10,4 +10,6 @@ public abstract class ShopItem extends Item {
     public abstract void decrementQuality();
 
     public abstract void incrementQuality();
+
+    public abstract void updateQuality();
 }

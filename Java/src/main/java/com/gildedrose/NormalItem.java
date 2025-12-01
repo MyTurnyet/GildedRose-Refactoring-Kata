@@ -21,4 +21,9 @@ public class NormalItem extends ShopItem {
     @Override
     public void incrementQuality() {
     }
+
+    @Override
+    public void updateQuality() {
+        decrementQuality();
+    }
 }
