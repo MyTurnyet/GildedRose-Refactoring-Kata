@@ -28,6 +28,10 @@ public class BackstagePasses extends ShopItem {
 
     @Override
     public void updateQuality() {
+        if (this.sellIn < 0) {
+            this.quality = 0;
+            return;
+        }
         incrementQuality();
     }
 
