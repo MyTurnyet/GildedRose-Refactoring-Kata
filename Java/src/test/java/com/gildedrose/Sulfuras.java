@@ -6,7 +6,7 @@ public class Sulfuras extends ShopItem {
     }
 
     @Override
-    public void decrementSellIn() {
+    public void updateSellIn() {
     }
 
     @Override

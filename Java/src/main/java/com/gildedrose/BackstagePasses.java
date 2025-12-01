@@ -6,8 +6,11 @@ public class BackstagePasses extends ShopItem {
     }
 
     @Override
-    public void decrementSellIn() {
+    public void updateSellIn() {
         this.sellIn = this.sellIn - 1;
+        if (this.sellIn < 0) {
+            this.quality = 0;
+        }
     }
 
     @Override
@@ -28,10 +31,7 @@ public class BackstagePasses extends ShopItem {
 
     @Override
     public void updateQuality() {
-        if (this.sellIn < 0) {
-            this.quality = 0;
-            return;
-        }
+
         incrementQuality();
     }
 

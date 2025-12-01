@@ -6,8 +6,11 @@ public class NormalItem extends ShopItem {
     }
 
     @Override
-    public void decrementSellIn() {
+    public void updateSellIn() {
         this.sellIn = this.sellIn - 1;
+        if (this.sellIn < 0) {
+            this.updateQuality();
+        }
     }
 
     @Override
