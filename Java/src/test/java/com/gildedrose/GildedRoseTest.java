@@ -37,7 +37,7 @@ class GildedRoseTest {
             BackstagePasses backstagePasses = new BackstagePasses(sellIn, quality);
             return backstagePasses;
         }
-        return new Item(name, sellIn, quality);
+        return new NormalItem(name, sellIn, quality);
     }
 
 }
