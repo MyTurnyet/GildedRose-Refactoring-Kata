@@ -6,7 +6,7 @@ public class AgedBrie extends ShopItem {
     }
 
     @Override
-    public void updateSellIn() {
+     void updateSellIn() {
         this.sellIn = this.sellIn - 1;
         if (this.sellIn < 0) {
             this.updateQuality();
@@ -14,11 +14,11 @@ public class AgedBrie extends ShopItem {
     }
 
     @Override
-    public void decrementQuality() {
+     void decrementQuality() {
     }
 
     @Override
-    public void incrementQuality() {
+     void incrementQuality() {
         if (this.quality >= 50) {
             return;
         }
@@ -26,7 +26,7 @@ public class AgedBrie extends ShopItem {
     }
 
     @Override
-    public void updateQuality() {
+     void updateQuality() {
         incrementQuality();
     }
 }

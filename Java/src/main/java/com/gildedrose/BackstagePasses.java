@@ -6,7 +6,7 @@ public class BackstagePasses extends ShopItem {
     }
 
     @Override
-    public void updateSellIn() {
+     void updateSellIn() {
         this.sellIn = this.sellIn - 1;
         if (this.sellIn < 0) {
             this.quality = 0;
@@ -14,11 +14,11 @@ public class BackstagePasses extends ShopItem {
     }
 
     @Override
-    public void decrementQuality() {
+     void decrementQuality() {
     }
 
     @Override
-    public void incrementQuality() {
+     void incrementQuality() {
         incrementQualityIfNotOver50();
         if (this.sellIn < 11) {
             incrementQualityIfNotOver50();
@@ -30,12 +30,12 @@ public class BackstagePasses extends ShopItem {
     }
 
     @Override
-    public void updateQuality() {
+     void updateQuality() {
 
         incrementQuality();
     }
 
-    private void incrementQualityIfNotOver50() {
+     void incrementQualityIfNotOver50() {
         if (this.quality >= 50) {
             return;
         }
