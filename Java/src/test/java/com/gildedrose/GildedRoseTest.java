@@ -11,7 +11,8 @@ class GildedRoseTest {
     @Test
     void testAllCombinations() {
         String[] names = {
-                "foo"
+                "Aged Brie",
+                
         };
         CombinationApprovals.verifyAllCombinations(
                 (name) ->
