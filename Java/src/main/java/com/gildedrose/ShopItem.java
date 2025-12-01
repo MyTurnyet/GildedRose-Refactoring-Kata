@@ -5,11 +5,16 @@ public abstract class ShopItem extends Item {
         super(name, sellIn, quality);
     }
 
-    public abstract void updateSellIn();
+    abstract void updateSellIn();
 
-    public abstract void decrementQuality();
+    abstract void decrementQuality();
 
-    public abstract void incrementQuality();
+    abstract void incrementQuality();
 
-    public abstract void updateQuality();
+    abstract void updateQuality();
+
+    public void processUpdate() {
+        this.updateQuality();
+        this.updateSellIn();
+    }
 }
