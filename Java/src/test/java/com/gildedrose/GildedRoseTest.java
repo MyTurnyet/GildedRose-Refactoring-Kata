@@ -12,7 +12,8 @@ class GildedRoseTest {
                 "Aged Brie",
                 "Backstage passes to a TAFKAL80ETC concert",
                 "Sulfuras, Hand of Ragnaros",
-                "Normal Item"
+                "Normal Item",
+                "Conjured Item"
         };
         Integer[] sellInValues = {-1, 0, 2, 6, 5, 10, 11};
         Integer[] qualityValues = {0, 1, 49, 50};
@@ -35,9 +36,12 @@ class GildedRoseTest {
                 return new AgedBrie(sellIn, quality);
             case "Backstage passes to a TAFKAL80ETC concert":
                 return new BackstagePasses(sellIn, quality);
-            default:
-                return new NormalItem(name, sellIn, quality);
+            
         }
+        if(name.contains("Conjured")){
+            return new ConjuredItem(name,sellIn,quality);
+        }
+        return new NormalItem(name,sellIn,quality);
 
     }
 
