@@ -30,16 +30,17 @@ class GildedRoseTest {
     }
 
     private static ShopItem createItem(String name, Integer sellIn, Integer quality) {
-        if(name.equals("Sulfuras, Hand of Ragnaros")){
-            return new Sulfuras( sellIn, quality);
+        switch (name) {
+            case "Sulfuras, Hand of Ragnaros":
+                return new Sulfuras(sellIn, quality);
+            case "Aged Brie":
+                return new AgedBrie(sellIn, quality);
+            case "Backstage passes to a TAFKAL80ETC concert":
+                return new BackstagePasses(sellIn, quality);
+            default:
+                return new NormalItem(name, sellIn, quality);
         }
-        if(name.equals("Aged Brie")){
-            return new AgedBrie( sellIn, quality);
-        }
-        if(name.equals("Backstage passes to a TAFKAL80ETC concert")){
-            return new BackstagePasses(sellIn, quality);
-        }
-        return new NormalItem(name, sellIn, quality);
+
     }
 
 }
