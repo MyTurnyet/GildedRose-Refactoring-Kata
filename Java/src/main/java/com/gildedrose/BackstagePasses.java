@@ -16,16 +16,13 @@ public class BackstagePasses extends ShopItem {
 
     @Override
     public void incrementQuality() {
-        if (this.quality < 50) {
-            this.quality = this.quality + 1;
+        incrementQualityIfNotOver50();
+        if (this.sellIn < 11) {
+            incrementQualityIfNotOver50();
+        }
 
-            if (this.sellIn < 11) {
-                incrementQualityIfNotOver50();
-            }
-
-            if (this.sellIn < 6) {
-                incrementQualityIfNotOver50();
-            }
+        if (this.sellIn < 6) {
+            incrementQualityIfNotOver50();
         }
     }
 
