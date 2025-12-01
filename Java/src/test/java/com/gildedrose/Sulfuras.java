@@ -12,4 +12,8 @@ public class Sulfuras extends ShopItem {
     @Override
     public void decrementQuality() {
     }
+
+    @Override
+    public void incrementQuality() {
+    }
 }

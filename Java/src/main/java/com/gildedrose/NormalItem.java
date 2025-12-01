@@ -17,4 +17,8 @@ public class NormalItem extends ShopItem {
         }
         this.quality = this.quality - 1;
     }
+
+    @Override
+    public void incrementQuality() {
+    }
 }
