@@ -12,6 +12,9 @@ public class NormalItem extends ShopItem {
 
     @Override
     public void decrementQuality() {
+        if (this.quality <= 0) {
+            return;
+        }
         this.quality = this.quality - 1;
     }
 }
